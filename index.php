@@ -1,2 +1,5 @@
 <?php
-echo "editado";
+
+echo "hola editado 4";
+
+?>
