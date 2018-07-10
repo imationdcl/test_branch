@@ -1,5 +1,6 @@
 <?php
 
-echo "hola editado 5";
+echo "hola editado 6";
 
 ?>
+$DEFAULT_RECIPIENTS
