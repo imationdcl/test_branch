@@ -15,6 +15,8 @@ pipeline {
         stage('Deploy') {
             steps {
 		sh 'cd /var/www/html/prueba'
+		sh 'rm -rf *'
+		sh 'git clone ${GIT_URL}'
 		sh 'git fetch'
 		sh 'git checkout ${BRANCH_NAME}'
             }
