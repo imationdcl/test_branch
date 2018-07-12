@@ -4,33 +4,21 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'echo "preparacion del ambiente"'
+                sh 'echo "preparacion del ambiente y limpiar ambiente de trabajo"'
             }
         }
-        stage('PHP Syntax check') { steps { sh 'echo "checkeo de sintaxis"' } }
         stage('Test'){
             steps {
                 sh 'echo "corriendo los test unitarios"'
 	    }
         }
-        stage('Checkstyle') {
+        stage('Deploy') {
             steps {
-		sh 'echo "Mirando estilo de codigo"'
+		sh 'cd /var/www/html/prueba'
+		sh 'git fetch'
+		sh 'git checkout ${BRANCH_NAME}'
             }
         }
-        stage('Lines of Code') { 
-	    steps {
-		 sh 'echo "lineas de codigo"' 
-	    }
-	}
-        
-        stage('Mess detection') {
-            steps {
-                sh 'echo "deteccion de codigo basura"'
-            }
-        }
-        stage('Software metrics') { steps { sh 'echo "generacion de metricas"' } }
-        stage('Generate documentation') { steps { sh 'echo "documentacion"' } }
         
     }
 }
