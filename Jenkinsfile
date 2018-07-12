@@ -19,7 +19,7 @@ pipeline {
 		sh 'git clone ${GIT_URL}'
 		sh 'git fetch'
 		sh 'git checkout ${BRANCH_NAME}'
-		SH 'git pull origin ${BRANCH_NAME}'
+		sh 'git pull origin ${BRANCH_NAME}'
             }
         }
         
