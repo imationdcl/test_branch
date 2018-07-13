@@ -24,7 +24,7 @@ pipeline {
         }
 	stage('SonarQube analysis') {
 	    steps {
-		sh "/home/anibal/Descargas/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner -Dsonar.projectKey=test_branch   -Dsonar.sources=.  -Dsonar.host.url=http://localhost:9000 "
+		//sh "/home/anibal/Descargas/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner -Dsonar.projectKey=test_branch   -Dsonar.sources=.  -Dsonar.host.url=http://localhost:9000 "
 	    }
 	}
         
